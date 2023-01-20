@@ -8,10 +8,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalTime;
-
-
 
 public class HelloController {
 
@@ -24,6 +24,15 @@ public class HelloController {
     public void switchToDashboard (ActionEvent event) throws IOException {
 
         String username = nameTextField.getText();
+
+        try {
+            File file = new File("username.txt");
+            FileWriter writer = new FileWriter(file);
+            writer.write(username);
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("dashboard.fxml"));
         root = loader.load();
