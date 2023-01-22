@@ -35,6 +35,9 @@ public class DashboardController {
     Button toDoButton;
 
     @FXML
+    Button diaryButton;
+
+    @FXML
     Text quote;
 
     private Stage stage;
@@ -81,6 +84,7 @@ public class DashboardController {
         root = loader.load();
 
         stage = (Stage)((javafx.scene.Node)event.getSource()).getScene().getWindow();
+        stage.setTitle("Calendar");
         scene = new Scene(root);
         scene.getStylesheets().add("Application.css");
         stage.setScene(scene);
@@ -93,8 +97,22 @@ public class DashboardController {
         root = loader.load();
 
         stage = (Stage)((javafx.scene.Node)event.getSource()).getScene().getWindow();
+        stage.setTitle("To-Do List");
         scene = new Scene(root);
         scene.getStylesheets().add("todo.css");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchToDiary (ActionEvent event) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("diary.fxml"));
+        root = loader.load();
+
+        stage = (Stage)((javafx.scene.Node)event.getSource()).getScene().getWindow();
+        stage.setTitle("Diary");
+        scene = new Scene(root);
+        //scene.getStylesheets().add("todo.css");
         stage.setScene(scene);
         stage.show();
     }

@@ -54,6 +54,7 @@ public class CalendarController {
         }
 
         stage = (Stage)((javafx.scene.Node)event.getSource()).getScene().getWindow();
+        stage.setTitle("Starter Kit App");
         scene = new Scene(root);
         scene.getStylesheets().add("style.css");
         stage.setScene(scene);

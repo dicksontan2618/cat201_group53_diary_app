@@ -34,21 +34,6 @@
                   </Label>
                </children>
             </Pane>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="247.0" stylesheets="@../style.css" text="Home" textFill="WHITE">
-               <padding>
-                  <Insets left="50.0" />
-               </padding>
-               <font>
-                  <Font size="14.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../home-inv.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
             <Button fx:id="calendarButton" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToCalendar" prefHeight="45.0" prefWidth="247.0" stylesheets="@../style.css" text="Calendar" textFill="WHITE">
                <padding>
                   <Insets left="50.0" />
@@ -64,7 +49,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="256.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="247.0" stylesheets="@../style.css" text="Diary" textFill="WHITE">
+            <Button fx:id="diaryButton" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="256.0" mnemonicParsing="false" onAction="#switchToDiary" prefHeight="45.0" prefWidth="247.0" stylesheets="@../style.css" text="Diary" textFill="WHITE">
                <padding>
                   <Insets left="50.0" />
                </padding>
@@ -110,12 +95,7 @@
          <font>
             <Font name="System Bold" size="32.0" />
          </font></Label>
-      <Text fill="WHITE" layoutX="280.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;The greatest glory in living lies not in never falling,">
-         <font>
-            <Font name="System Italic" size="21.0" />
-         </font>
-      </Text>
-      <Text fill="WHITE" layoutX="606.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Nelson Mandela">
+      <Text fx:id="quote" fill="WHITE" layoutX="365.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;The greatest glory in living lies not in never falling,">
          <font>
             <Font name="System Italic" size="18.0" />
          </font>
@@ -130,11 +110,6 @@
             <Image url="@../sun.png" />
          </image>
       </ImageView>
-      <Text fill="WHITE" layoutX="287.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="but in rising every time we fall.&quot;">
-         <font>
-            <Font name="System Italic" size="21.0" />
-         </font>
-      </Text>
       <Text fill="WHITE" layoutX="405.0" layoutY="507.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developed with ❤ by CAT201 Group 53 ">
          <font>
             <Font name="System Italic" size="12.0" />

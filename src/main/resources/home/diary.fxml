@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="860.0" style="-fx-background-color: #BFADA3;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.DiaryController">
+    <children>
+        <TextArea fx:id="txt" layoutY="43.0" prefHeight="482.0" prefWidth="860.0" />
+        <MenuBar layoutX="57.0" prefHeight="46.0" prefWidth="803.0" style="-fx-background-color: #B89685;" styleClass="style.css" AnchorPane.topAnchor="0.0">
+            <menus>
+                <Menu id="menu-file" mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handlef1NewClick" text="New" />
+                        <MenuItem mnemonicParsing="false" onAction="#handlef2OpenClick" text="Open" />
+                        <MenuItem mnemonicParsing="false" onAction="#handlef3SaveClick" text="Save" />
+                        <MenuItem mnemonicParsing="false" onAction="#handlef4ExitClick" text="Exit" />
+                    </items>
+                </Menu>
+                <Menu id="menu-edit" mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handlee1UndoClick" text="Undo" />
+                        <MenuItem mnemonicParsing="false" onAction="#handlee2RedoClick" text="Redo" />
+                        <MenuItem mnemonicParsing="false" onAction="#handlee3CutClick" text="Cut" />
+                        <MenuItem mnemonicParsing="false" onAction="#handlee4CopyClick" text="Copy" />
+                        <MenuItem mnemonicParsing="false" onAction="#handlee5PasteClick" text="Paste" />
+                        <MenuItem mnemonicParsing="false" onAction="#handlee6DeleteClick" text="Delete" />
+                        <MenuItem mnemonicParsing="false" onAction="#handlee7SelectAllClick" text="Select All" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help &amp; Settings">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleh1AboutClick" text="About" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleh2FontSizeClick" text="Font Size" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleh3FontTypeClick" text="Font Type" />
+                        <Menu fx:id="h4DateFormat" mnemonicParsing="false" text="Date Format">
+                            <items>
+                                <MenuItem fx:id="a1ddMMyyyy" mnemonicParsing="false" onAction="#handlea1DFormatClick" text="dd/MM/yyyy" />
+                                <MenuItem fx:id="a2MMddyyyy" mnemonicParsing="false" onAction="#handlea2DFormatClick" text="MM/dd/yyyy" />
+                                <MenuItem fx:id="a3EEEMMMdyyyy" mnemonicParsing="false" onAction="#handlea3DFormatClick" text="EEEE, MMM d yyyy" />
+                                <MenuItem fx:id="a4EEEdMMMyyyy" mnemonicParsing="false" onAction="#handlea4DFormatClick" text="EEEE, d MMM yyyy" />
+                                <MenuItem fx:id="a5yyyyddMM" mnemonicParsing="false" onAction="#handlea5DFormatClick" text="yyyy/d/MMM" />
+                                <MenuItem fx:id="a6yyyyMMdd" mnemonicParsing="false" onAction="#handlea6DFormatClick" text="yyyy/MMM/d" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Time Format">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#handlet1TFormatClick" text="HH:mm:ss" />
+                                <MenuItem mnemonicParsing="false" onAction="#handlet2TFormatClick" text="h:mm a" />
+                                <MenuItem mnemonicParsing="false" onAction="#handlet3TFormatClick" text="HHmm" />
+                                <MenuItem mnemonicParsing="false" onAction="#handlet4TFormatClick" text="hh:mm:ss a" />
+                            </items>
+                        </Menu>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Shortcuts">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handlec1DateClick" text="Today's Date" />
+                        <MenuItem mnemonicParsing="false" onAction="#handlec2TimeClick" text="Current Time" />
+                        <Menu mnemonicParsing="false" text="Today's Emotion" xmlns:fx="http://javafx.com/fxml">
+                            <items>
+                                <MenuItem fx:id="m1emotion" mnemonicParsing="false" onAction="#handlem1EmotionClick" text="Excellent" />
+                                <MenuItem fx:id="m2emotion" mnemonicParsing="false" onAction="#handlem2EmotionClick" text="Good" />
+                                <MenuItem fx:id="m3emotion" mnemonicParsing="false" onAction="#handlem3EmotionClick" text="Average" />
+                                <MenuItem fx:id="m4emotion" mnemonicParsing="false" onAction="#handlem4EmotionClick" text="Poor" />
+                                <MenuItem fx:id="m5emotion" mnemonicParsing="false" onAction="#handlem5EmotionClick" text="Terrible" />
+                            </items>
+                        </Menu>
+                    </items>
+                </Menu>
+            </menus>
+            <cursor>
+                <Cursor fx:constant="DEFAULT" />
+            </cursor>
+            <padding>
+                <Insets bottom="10.0" left="10.0" top="10.0" />
+            </padding>
+        </MenuBar>
+        <Button contentDisplay="CENTER" layoutY="-1.0" mnemonicParsing="false" onAction="#switchToHome" prefHeight="46.0" prefWidth="58.0" style="-fx-background-color: #B89685;">
+         <graphic>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Home" />
+         </graphic></Button>
+
+    </children>
+</AnchorPane>
