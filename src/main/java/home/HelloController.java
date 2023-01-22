@@ -40,6 +40,7 @@ public class HelloController {
         DashboardController DashboardController = loader.getController();
         DashboardController.displayName(username);
         DashboardController.displayDate(String.valueOf(java.time.LocalDate.now()));
+        DashboardController.randomQuote();
 
         LocalTime currentTime = LocalTime.now();
         int hour = currentTime.getHour();

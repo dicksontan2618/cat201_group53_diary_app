@@ -76,6 +76,7 @@ public class ToDoController implements Initializable {
             e.printStackTrace();
         }
         DashboardController.displayDate(String.valueOf(java.time.LocalDate.now()));
+        DashboardController.randomQuote();
 
         LocalTime currentTime = LocalTime.now();
         int hour = currentTime.getHour();

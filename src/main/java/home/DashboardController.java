@@ -8,9 +8,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Random;
 
 public class DashboardController {
 
@@ -32,6 +34,9 @@ public class DashboardController {
     @FXML
     Button toDoButton;
 
+    @FXML
+    Text quote;
+
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -50,6 +55,23 @@ public class DashboardController {
 
     public void hideNight(){
         nightImage.setVisible(false);
+    }
+
+    public void randomQuote(){
+        String[] quotes = {
+                "Life is too short to wait, so just do it.",
+                "The present is a gift, don't take for granted.",
+                "Happiness is a mind, not something artificial.",
+                "Dream it big, and work ultimately hard for it.",
+                "Simplicity is the ultimate sophistication.",
+                "Be yourself; everyone else is already taken.",
+                "The best revenge and redemption is massive success.",
+                "The way to do great work is love what you do.",
+                "The most difficult thing is the decision to act.",
+        };
+        Random rand = new Random();
+        int quoteIndex = rand.nextInt(quotes.length);
+        quote.setText("\"" + quotes[quoteIndex] + "\"");
     }
 
 
