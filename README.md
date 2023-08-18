@@ -1,3 +1,3 @@
 # cat201_group53
 
-Project for CAT201 by Group 53
+Simple Java Diary App for USM CS Course CAT201
